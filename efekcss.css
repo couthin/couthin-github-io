@@ -1,0 +1,271 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,800,700,600,300);
+/*mendeklarasikan body*/
+body{
+	/*background: rgb(163, 149, 245);*/
+	background: #b9e7e6;
+	margin:0;
+	font-family: 'Open Sans', sans-serif;
+}
+
+/*header*/
+header{
+	text-align: center;
+	color: rgb(000, 000, 000);
+
+}
+
+header .judul{
+	font-size: 17px;
+}
+
+/*ahkir header*/
+/*mendeklarasikan a atau memanggil link*/
+a{
+	text-decoration: none;
+	color: black;
+}
+
+/*dropdown pada header*/
+.dropdown {
+	float: left;
+	overflow: hidden;
+}
+  
+.dropdown .dropbtn {
+	font-size: 16px; 
+	border: none;
+	outline: none;
+	color: black;
+	padding: 14px 16px;
+	background-color: inherit;
+	font-family: inherit;
+	margin: 0; 
+	text-decoration: none;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+	background-color: aqua;
+}
+  
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px black;
+	z-index: 1;
+}
+  
+.dropdown-content a {	
+	float: none;
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+}
+
+/*hover ketika disentuh*/  
+.dropdown-content a:hover {
+	background-color: whitesmoke;
+}
+  
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+/*ahkir dari class dropdown*/
+/*header 1 atau tempat belakang foto*/	
+.header1{
+	/*background: rgb(00, 230, 00);*/
+	background:#6fd4e1;
+	padding: 0;
+	width: 100%;
+	box-shadow: 0 0 5px #6fd4e1;
+	top:0;
+	position: fixed;
+	z-index: 99;	
+	transition: all 1.5s ease;
+}
+
+/*mengambil gambar dan memberikan efek*/
+.img{
+	background-image: url(logo.png);
+	position: relative;
+	background-size: cover;
+    width: 200px;
+    height: 200px; 
+	border-radius:30%;
+	-webkit-animation: pindah 3s infinite;
+}
+
+@keyframes pindah{
+    0%{
+        transform: rotate(-5deg);
+    }
+    50%{
+        transform: rotate(5deg);
+    }
+    100%{
+        transform: rotate(-5deg);
+    }
+}
+
+/*ahkir class img*/
+/*memberikan background gambar*/
+.bghd{
+	background-image: url(saya.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	transition: all 1.5s ease;
+}
+/*mendeklarasikan isi dari konten*/
+.isi{
+	max-width : 100%;
+	margin : 20px auto;
+	background : white;
+	overflow : hidden;
+	transition: all 1.5s ease;
+}
+/*konten sebelah kiri atau atas pada layar kecil*/
+.kiri{
+	width : 300px;
+	padding : 10px;
+	margin : 10px;
+	float : left;
+	background-color: #b9e7e6;
+	transition: all 1.5s ease;
+}
+
+.kiri ul{
+	list-style-type : none;
+}
+	
+.kiri ul li{
+	display : block;
+}
+	
+.kiri ul li a{
+	display	:block;
+	margin-bottom : 5px;
+	padding	: 10px 5px;
+}
+	
+.kiri ul li a:hover{
+	color:blue;
+}
+/*ahkir konten kiri*/
+/*konten sebelah kanan atau atas pada layar kecil*/
+.kanan{
+	width : 960px;
+	border : 1px solid grey;
+	padding : 10px;
+	margin : 10px;
+	float : left;
+	transition: all 1.5s ease;
+}
+
+.kanan img{
+	max-width : 100%;
+	height : auto;
+}
+
+/*fotoer*/
+.footer{
+	clear : both;
+	padding	: 15px;
+	background : #6fd4e1;
+	box-shadow : 0 0 5px #6fd4e1;
+
+}
+
+/*mendeklarasikan teks yang berindent kan 5%*/
+.paragraf{
+	text-indent: 5%;
+}
+/*mendekklarasikan padding kiri 10%*/
+.padding{
+	padding-left: 10%;
+}
+
+@media screen and (max-width: 1920px) {
+ 
+	.header,
+	.footer {
+		position:inherit;
+	}
+	.kiri {
+        width: 26%;
+        float: left;
+    }
+
+    .kanan {
+        width: 72%;
+        float: left;
+    }
+}
+@media screen and (width: 1366px) {
+ 
+	.header,
+	.footer {
+		position:inherit;
+	}
+	.kiri {
+        width: 300px;
+        float: left;
+    }
+
+    .kanan {
+        width: 960px;
+        float: left;
+    }
+}
+@media screen and (max-width: 1365px) {
+ 
+	.header,
+	.footer {
+		position:inherit;
+	}
+	.kiri {
+        width: 26%;
+        float: left;
+    }
+
+    .kanan {
+        width: 65%;
+        float: left;
+    }
+}
+@media screen and (max-width: 960px) {
+ 
+	.header,
+	.footer {
+		position:inherit;
+	}
+	.kiri {
+        width: 25%;
+        float: left;
+    }
+
+    .kanan {
+        width: 63%;
+        float: left;
+    }
+}
+@media screen and (max-width: 780px) {
+
+    .header, 
+    .footer{
+        text-align: center;
+    }
+    .kiri {
+        width: auto;
+        float: none;
+    }
+
+    .kanan {
+        width: auto;
+        float: none;
+    }
+
+
+}
